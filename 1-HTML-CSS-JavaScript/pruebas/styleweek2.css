@@ -1,0 +1,42 @@
+fieldset 
+{
+
+background-color: lightyellow;
+border: yellow 10px solid;
+margin-bottom: 10px;
+width: 720px;
+}
+label
+{
+width: 180px;
+display: inline-block;
+vertical-align: top;
+text-align: right;
+}
+label:hover{ font-size: 40px;}
+.labelauto{
+    width: auto;
+
+}
+
+.spa1{
+    background-color: saddlebrown;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+.spa2{
+    background-color:purple;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+
+}

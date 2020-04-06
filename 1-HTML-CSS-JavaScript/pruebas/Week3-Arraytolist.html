@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Javascript Array</h2>
+    <script>
+        var pets, text, flen, i;
+        pets = ["dog","rabbit","turtle","cat"];
+        flen = pets.length;
+        text="<ol>";
+        for  (i=0; i<flen; i++){
+            text= text + "<li>"+pets[i] +"</li>";
+        }
+        text = text+"</ol>";
+        alert("This is the resulting Array using an HTML List: " + text);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta name="me" content="simpleform">
+</head>
+<body>
+    <form action="https://learn.nucamp.co/show_everything.php" method="post">
+        <fieldset>
+            <legend>Basic info:</legend>
+    <p>Please enter anyfeedback you have for us.</p>
+    <textarea rows="3" cols="60" name="feedback">Please enter your text here</textarea>
+    <br>
+    <input type="submit" value="send">
+    </fieldset>
+    <fieldset>
+        <legend>Personal data:</legend>
+        <label for="First name">First name:</label>
+        <input type="text" id="fist name" name="first name" value="first name" autofocus><br>
+        <label for="Last name">Last name:</label>
+        <input type="text" id="last name" name="last name" value="last name" required>
+
+
+
+
+
+    </fieldset>
+    <fieldset>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="email">
+    </fieldset>
+    <fieldset>
+        <legend>
+            Please write your full address in this field:
+        </legend>
+        <label for="adress">Address:</label>
+        <textarea rows="5" cols="60" name="address">Please enter your address here</textarea>
+    </fieldset>
+    <fieldset>
+        <label for="checkbox">I read all the directions very well</label>
+        <input type="checkbox" name="checkbox" id="checkbox">
+    </fieldset>
+</form>
+</body>
+</html>

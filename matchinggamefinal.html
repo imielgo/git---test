@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>Matching Game</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .box {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+    }
+
+    #left {
+      left: 0;
+    }
+
+    #right {
+      left: 500px;
+      border-left: 1px solid black;
+    }
+  </style>
+</head>
+<body onload="init()">
+  <h1>MATCHING GAME CLICK ON A FACE</h1>
+  <div id="right" class="box"></div>
+  <div id="left" class="box"></div>
+  <script>
+    var leftContainer = document.getElementById('left');
+    var rightContainer = document.getElementById('right');
+    var totalImages = createRandom(11);
+
+    function init() {      
+      createRandomImages(totalImages);
+      cloneImages();
+    }
+
+    function createImg() {
+      var img = document.createElement('img');
+      img.src = 'smile.jpg';
+      img.style.width = '32px';
+      img.style.height = '32px';
+      img.style.position = 'absolute';
+      return img;
+    }
+
+    function createRandom(limit) {
+      return Math.floor(Math.random() * limit);
+    }
+
+    function createRandomImages(nImages) {
+      for (var i = 0; i < nImages; i ++) {
+        var img = createImg();
+        var top = Math.floor(Math.random() * 450);
+        var left = Math.floor(Math.random() * 450);
+        img.style.top = top + 'px';
+        img.style.left = left + 'px';        
+
+        img.addEventListener('click', function(event) {
+          var element = event.target;
+          var currentImages = leftContainer.getElementsByTagName('img');
+          if (currentImages[currentImages.length - 1] == element) {
+            addMore();
+          } else {
+            if (totalImages  === currentImages.length) {
+              element.parentNode.removeChild(element);
+            }
+          }
+        }, false);
+        leftContainer.appendChild(img);
+      }
+    }
+
+    function cloneImages() {
+      rightContainer.innerHTML = '';
+      var images = leftContainer.getElementsByTagName('img');
+      var nImages = images.length;
+      var imgToDelete = createRandom(nImages);
+      for (var i = 0; i < nImages; i ++) {
+        if (i != imgToDelete) {
+          var imageClone = images[i].cloneNode(false);
+          rightContainer.appendChild(imageClone);
+        }
+      }
+    }
+
+    function addMore() {
+      var plus = 5;
+      totalImages = totalImages + plus;
+      createRandomImages(plus);
+      cloneImages(leftContainer, rightContainer);
+    }
+  </script>
+</body>
+</html>

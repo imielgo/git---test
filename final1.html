@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title> MATCHING GAME</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .box {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+    }
+
+    #divleft {
+      left: 0;
+    }
+
+    #divright {
+      left: 500px;
+      border-left: 1px solid black;
+    }
+  </style>
+</head>
+<body onload="init()">
+  <h1>MATCHING GAME CLICK ON A FACE ON THE LEFT </h1>
+  <div id="right" class="box"></div>
+  <div id="left" class="box"></div>
+  <script>
+    var leftContainer = document.getElementById('left');
+    var rightContainer = document.getElementById('right');
+    var totalImages = createRandom(11);
+    function init() {      
+      createRandomImages(totalImages);
+      cloneImages();
+    }
+
+    function createImg() {
+      var img = document.createElement('img');
+      img.src = 'smile.jpg';
+      img.style.width = '32px';
+      img.style.height = '32px';
+      img.style.position = 'absolute';
+      return img;
+      function createRandom(limit) {
+      return Math.floor(Math.random() * limit);
+    }
+
+    function createRandomImages(nImages) {
+      for (var i = 0; i < nImages; i ++) {
+        var img = createImg();
+        var top = Math.floor(Math.random() * 450);
+        var left = Math.floor(Math.random() * 450);
+        img.style.top = top + 'px';
+        img.style.left = left + 'px';  
+
+        theBody.onclick ¡ function gameOver() {
+            alert("Game Over!");
+            theBody.onclick = null;
+            theLeftSide.lastChild.onclick = null;
+        };
+        theLeftSide.lastChild.onclick=Function nextlevel(event){
+            event.stopPropagation();
+            numberOfFaces +=5;
+            generateFaces();
+        }
+
+
+
+    

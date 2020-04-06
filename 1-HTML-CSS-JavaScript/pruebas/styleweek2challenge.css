@@ -1,0 +1,111 @@
+.hijo 
+{
+
+background-color: white;
+border: purple 2px solid;
+border-radius: 8px;
+margin: 30px;
+width: auto;
+flex-shrink: 0;
+flex-grow: 100%;
+text-align: left;
+}
+.leyenda{
+    background: purple;
+    color: white;
+    width: auto;
+    padding: 5px;
+    border-radius: 8px;
+}
+label
+{
+
+width: 180px;
+display: inline-block;
+vertical-align: top;
+text-align: auto;
+}
+label:hover{ font-size: 40px;}
+.labelauto{
+    width: auto;
+
+}
+
+.spa1{
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+.spa2{
+    background-color:white;
+    border: none;
+    color: black;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+
+}
+.contenedor{
+    display: flex;
+    background: white;
+    width: 100%;
+    margin: 50px auto;
+    border: white 2px solid;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: space-around;
+
+}
+#submit{
+    background-color:#0096dc;
+    border: none !important;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    font-size: 8px;
+    margin: 30px;
+
+}
+h3{
+    text-align: center;
+    color:white
+
+}
+body{
+    background-image: radial-gradient(circle, #5073c7,#9848a7)
+
+}
+.control{
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+}
+.control label{
+    display:block;
+    width: 100%;
+    
+}
+.control input{
+    display: block;
+    width: 100%;
+}
+.control.inline label {
+    width: auto;
+}
+.control.inline {
+    display: flex;
+    
+}
+.control.inline input{
+    display: inline;
+    width: auto;
+}
